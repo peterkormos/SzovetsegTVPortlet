@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+
+<portlet-app 
+
+xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" 
+version="2.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+
+>
+	<portlet>
+		<portlet-name>SzovetsegTV</portlet-name>
+		<display-name>SzovetsegTV Display Name</display-name>
+		<portlet-class>org.msz.liferay.portlet.SzovetsegTVPortlet</portlet-class>
+        <init-param>
+            <name>view-jsp</name>
+            <value>/view.jsp</value>
+        </init-param>
+        <init-param>
+            <name>edit-jsp</name>
+            <value>/edit.jsp</value>
+        </init-param>
+        <init-param>
+            <name>help-jsp</name>
+            <value>/help.jsp</value>
+        </init-param>
+      
+
+		<expiration-cache>0</expiration-cache>
+
+		<supports>
+			<mime-type>text/html</mime-type>
+            <portlet-mode>EDIT</portlet-mode>
+            <portlet-mode>HELP</portlet-mode>
+		</supports>
+
+		<portlet-info>
+			<title>SzovetsegTV</title>
+			<short-title>SzovetsegTV</short-title>
+			<keywords>SzovetsegTV</keywords>
+		</portlet-info>
+		
+		<portlet-preferences>
+            <preference>
+                <name>aboutURL</name>
+                <value>/about.jsp</value>
+            </preference>
+            <preference>
+                <name>timeframeURL</name>
+                <value>/timeframe.jsp</value>
+            </preference>
+            <preference>
+                <name>programURL</name>
+                <value>/program.jsp</value>
+            </preference>
+            <preference>
+                <name>programmesURL</name>
+                <value>/programmes.jsp</value>
+            </preference>
+            
+            <preference>
+                <name>responseMessageURL</name>
+                <value>/responseMessage.jsp</value>
+            </preference>
+			
+		</portlet-preferences>		
+		
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+</portlet-app>

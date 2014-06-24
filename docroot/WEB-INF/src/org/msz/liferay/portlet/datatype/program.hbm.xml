@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.msz.liferay.portlet.datatype"
+	default-lazy="false">
+	<class name="Program" table="sztv_programs">
+		<id name="id" column="programID">
+		</id>
+		
+        <property name="description" column="description"></property>
+        <property name="length" column="program_length"></property>
+        <property name="photoUrl" column="photoUrl"></property>
+        <property name="videoUrl" column="videoUrl"></property>
+        <property name="title" column="title"></property>
+        <many-to-one name="timeframe" class="Timeframe" column="timeframeID"></many-to-one>
+	</class>
+</hibernate-mapping>

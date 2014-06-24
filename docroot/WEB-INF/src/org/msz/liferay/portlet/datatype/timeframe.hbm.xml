@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.msz.liferay.portlet.datatype"
+	default-lazy="false">
+	<class name="Timeframe" table="sztv_timeframes">
+		<id name="id" column="timeframeID">
+		</id>
+		<property name="closed" column="timeframe_closed"></property>
+		<property name="cycle" column="timeframe_cycle"></property>
+		<property name="editor" column="timeframe_editor"></property>
+		<property name="from" column="timeframe_from"></property>
+		<property name="to" column="timeframe_to"></property>
+	</class>
+</hibernate-mapping>

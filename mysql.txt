@@ -1,0 +1,31 @@
+
+
+alter table sztv_timeframes add timeframe_cycle varchar(50);
+
+
+create table sztv_timeframes (
+    timeframeID int primary key default 0, 
+    timeframe_closed BOOLEAN not null, 
+    timeframe_from BIGINT not null, 
+    timeframe_to BIGINT not null, 
+    timeframe_editor VARCHAR(50) not null, 
+    timeframe_cycle varchar(50) not null);
+    
+create table sztv_programs (
+    programID int primary key, 
+    timeframeID int not null default 0,
+    title VARCHAR(50) not null, 
+    description VARCHAR(500), 
+    photoUrl VARCHAR(50), 
+    videoUrl VARCHAR(50), 
+     
+    program_length bigint not null
+    );
+
+drop table sztv_timeframes;
+drop table sztv_programs;
+
+,
+    CONSTRAINT timeframeID_fk FOREIGN KEY (timeframeID) 
+        REFERENCES sztv_timeframes(timeframeID)
+            ON DELETE CASCADE  
